@@ -70,7 +70,7 @@ ICmdProcessor *handler_ptrs[] = {
   &helpHandler
 };
 
-UARTCommandManager Mgr(handler_ptrs, sizeof(handler_ptrs));
+UARTCommandManager Mgr(handler_ptrs, sizeof(handler_ptrs) / sizeof(ICmdProcessor *));
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

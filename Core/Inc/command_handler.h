@@ -50,7 +50,11 @@ public:
     
     virtual bool onCommand(const char *command, size_t length) override 
     {
-        if (strncmp(command, _command_name, FWT::min(strlen(_command_name), length)) != 0)
+        size_t cmd_len = FWT::min(strlen(_command_name), length);
+
+        // Command parsing should be replaced with FSM
+        if (strncmp(command, _command_name, cmd_len) != 0 ||
+            (command[cmd_len] != ' ' && command[cmd_len] != '\r' && command[cmd_len] != '\n' && command[cmd_len] != '\n' && command[cmd_len] != 0))
             return false;
 
         const char *param_start = command + strlen(_command_name);
