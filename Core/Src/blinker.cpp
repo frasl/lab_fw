@@ -1,13 +1,15 @@
 #include "gpio.h"
 #include "blinker.h"
 
+#include "RegistersTemplate.hpp"
+
 void Blinker::processBlinkEvent()
 {
+    using RedLed = registers::GpioPin< GPIOC_BASE, LEDR_Pin >;
+    using RedGreen = registers::GpioPin< GPIOC_BASE , LEDR_Pin >;
     if (_do_i_blink)
     {
-        HAL_GPIO_WritePin(LEDR_GPIO_Port, LEDR_Pin, _current_blink ? GPIO_PIN_SET : GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(LEDG_GPIO_Port, LEDG_Pin, _current_blink ? GPIO_PIN_RESET : GPIO_PIN_SET);
-
-        _current_blink = !_current_blink;
+        RedLed::Toggle();
+        RedGreen::Toggle();
     }
 }

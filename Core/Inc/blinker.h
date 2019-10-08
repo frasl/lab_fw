@@ -20,12 +20,10 @@ public:
 
 private:
     Blinker() :
-        _do_i_blink(false),
-        _current_blink(false)
+        _do_i_blink(false)
     {}
 
     bool _do_i_blink;
-    bool _current_blink;
 };
 
 #endif

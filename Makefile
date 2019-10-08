@@ -51,35 +51,35 @@ USB_DEVICE/App/usb_device.c \
 USB_DEVICE/App/usbd_desc.c \
 USB_DEVICE/App/usbd_storage_if.c \
 USB_DEVICE/Target/usbd_conf.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pcd_ex.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pcd.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_ll_usb.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim_ex.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc_ex.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_cortex.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pwr.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pwr_ex.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma_ex.c \
-Core/Src/system_stm32f2xx.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_data.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_scsi.c \
-Core/Src/fsmc.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_ll_fsmc.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_nand.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pcd_ex.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pcd.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_ll_usb.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_tim_ex.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_rcc_ex.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_cortex.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_flash_ex.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pwr.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_pwr_ex.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_gpio.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_dma_ex.c \
+$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
+$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
+$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
+$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc.c \
+$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c \
+$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_data.c \
+$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_scsi.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_ll_fsmc.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_nand.c \
+$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_uart.c \
 Core/Src/usart.c \
-C:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_uart.c
+Core/Src/fsmc.c \
+Core/Src/system_stm32f2xx.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -141,12 +141,12 @@ C_INCLUDES =  \
 -ICore/Inc \
 -IUSB_DEVICE/App \
 -IUSB_DEVICE/Target \
--IC:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Inc \
--IC:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/STM32F2xx_HAL_Driver/Inc/Legacy \
--IC:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Core/Inc \
--IC:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc \
--IC:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/CMSIS/Device/ST/STM32F2xx/Include \
--IC:/Users/S2400121/STM32Cube/Repository/STM32Cube_FW_F2_V1.7.0/Drivers/CMSIS/Include
+-I$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Inc \
+-I$(STM_CUBE_PATH)/Drivers/STM32F2xx_HAL_Driver/Inc/Legacy \
+-I$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Core/Inc \
+-I$(STM_CUBE_PATH)/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc \
+-I$(STM_CUBE_PATH)/Drivers/CMSIS/Device/ST/STM32F2xx/Include \
+-I$(STM_CUBE_PATH)/Drivers/CMSIS/Include
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
@@ -176,7 +176,8 @@ LIBDIR =
 LDFLAGS = $(MCU) -specs=nano.specs -specs=nosys.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 
 # default action: build all
-all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+# all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
+all: $(BUILD_DIR)/$(TARGET).elf
 
 
 #######################################
@@ -201,17 +202,19 @@ $(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR)
 	@$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 
 $(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
-	$(AS) -c $(CFLAGS) $< -o $@
+	$(info assembling $<)
+	@$(AS) -c $(CFLAGS) $< -o $@
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
-	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
-	$(SZ) $@
+	$(info linking $@)
+	@$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	@$(SZ) $@
 
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
-	$(HEX) $< $@
+	@$(HEX) $< $@
 	
 $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
-	$(BIN) $< $@	
+	@$(BIN) $< $@	
 	
 $(BUILD_DIR):
 	mkdir $@		
