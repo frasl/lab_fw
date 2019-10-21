@@ -28,6 +28,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "uart_command_manager.h"
+#include "RegistersTemplate.hpp"
 #include "blinker.h"
 /* USER CODE END Includes */
 
@@ -130,7 +131,9 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
+  //MX_GPIO_Init();
+  Blinker::getInstance().initBlinker();
+
   MX_USB_DEVICE_Init();
   MX_FSMC_Init();
   MX_USART1_UART_Init();

@@ -17,6 +17,7 @@ public:
     }
 
     void processBlinkEvent();
+    void initBlinker();
 
 private:
     Blinker() :

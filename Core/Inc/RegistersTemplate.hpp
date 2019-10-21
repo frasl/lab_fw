@@ -48,7 +48,7 @@ public:
     }
 };
 
-template <uint32_t addr, typename T>
+template <uint32_t addr>
 struct Gpio
 {
     using Moder = Register<addr, GPIO_TypeDef, &GPIO_TypeDef::MODER, ReadWriteReg>;
@@ -63,12 +63,22 @@ struct Gpio
 template <uint32_t addr, uint32_t pin>
 class GpioPin
 {
-private:     
-    using GPIOReg = Gpio<addr, GPIO_TypeDef> ;
-public:
-    __forceinline static void OutputPushPull(void)
+public:    
+    enum PinSpeed
     {
-        GPIOReg::Moder::SetValue(0x01 << (pin * 2));
+        LOW = 0b00,
+        MEDIUM = 0b01,
+        HIGH = 0b10,
+        VERYHIGH = 0b11
+    };
+private:     
+    using GPIOReg = Gpio<addr>;
+public:
+    __forceinline static void OutputPushPull(PinSpeed speed)
+    {
+        GPIOReg::Moder::SetValue((uint32_t)(0x01 << (pin * 2)));
+        GPIOReg::Otyper::SetValue((uint32_t)(0x00 << pin));
+        GPIOReg::Ospeedr::SetValue(speed << (pin * 2));
     }
     __forceinline static void Set(void)
     {
