@@ -1,23 +1,23 @@
-#include "gpio.h"
-#include "blinker.h"
 
-#include "RegistersTemplate.hpp"
+#include "gpio.h"
+#include "GPIORegisters.hpp"
+#include "blinker.h"
 
 void Blinker::initBlinker()
 {
     using RedLed = registers::GpioPin< GPIOC_BASE, 9>;
-    using RedGreen = registers::GpioPin< GPIOC_BASE , 10>;
-    RedLed::OutputPushPull(RedLed::PinSpeed::LOW);
-    RedGreen::OutputPushPull(RedGreen::PinSpeed::LOW);
+    using GreenLed = registers::GpioPin< GPIOC_BASE, 10>;
+    RedLed::OutputPushPull();
+    GreenLed::OutputPushPull();
 }
 
 void Blinker::processBlinkEvent()
 {
     using RedLed = registers::GpioPin< GPIOC_BASE, 9>;
-    using RedGreen = registers::GpioPin< GPIOC_BASE , 10>;
+    using GreenLed = registers::GpioPin< GPIOC_BASE, 10>;
     if (_do_i_blink)
     {
         RedLed::Toggle();
-        RedGreen::Toggle();
+        GreenLed::Toggle();
     }
 }
