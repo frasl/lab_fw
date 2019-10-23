@@ -7,7 +7,7 @@ namespace registers
 {
 
 template <uint32_t addr>
-class Moder : public Register<addr, GPIO_TypeDef, &GPIO_TypeDef::MODER, ReadWriteReg>
+class Moder
 {
 private:
     static const uint32_t moder_mask = 0b11;
@@ -27,12 +27,12 @@ public:
     }
     __forceinline static void AsAlternate(uint32_t pin)
     {
-        reg::ModifyBitMask(moder_mask, moder_alternate, (pin * 2));
+        reg::ModifyBitMask(moder_mask, moder_alternate, (pin * 2U));
     }
 };
 
 template <uint32_t addr>
-class Otyper : public Register<addr, GPIO_TypeDef, &GPIO_TypeDef::OTYPER, ReadWriteReg>
+class Otyper
 {
 private:
     using reg = Register<addr, GPIO_TypeDef, &GPIO_TypeDef::OTYPER, ReadWriteReg>;
@@ -47,13 +47,38 @@ public:
     }
 };
 
+template <uint32_t addr>
+class Ospeedr
+{
+private:
+    using reg = Register<addr, GPIO_TypeDef, &GPIO_TypeDef::OSPEEDR, ReadWriteReg>;
+public:
+    __forceinline static void AsLow(uint32_t pin)
+    {
+        reg::ModifyBitMask(0b11, 0b00, (pin * 2U));
+    }
+    __forceinline static void AsMedium(uint32_t pin)
+    {
+        reg::ModifyBitMask(0b11, 0b01, (pin * 2U));
+    }
+    __forceinline static void AsHigh(uint32_t pin)
+    {
+        reg::ModifyBitMask(0b11, 0b10, (pin * 2U));
+    }
+    __forceinline static void AsVeryHigh(uint32_t pin)
+    {
+        reg::ModifyBitMask(0b11, 0b11, (pin * 2U));
+    }
+
+};
+
 template <uint32_t addr, uint32_t pin>
 class GpioPin
 {
 protected:    
     using moder = Moder<addr>;
     using otyper = Otyper<addr>;
-    using Ospeedr = Register<addr, GPIO_TypeDef, &GPIO_TypeDef::OSPEEDR, ReadWriteReg>;
+    using ospeedr = Ospeedr<addr>;
     using Pupdr = Register<addr, GPIO_TypeDef, &GPIO_TypeDef::PUPDR, ReadWriteReg>;
     using Idr = Register<addr, GPIO_TypeDef, &GPIO_TypeDef::IDR, ReadReg>;
     using Odr = Register<addr, GPIO_TypeDef, &GPIO_TypeDef::ODR, WriteReg>;
@@ -63,7 +88,7 @@ public:
     {
         moder::AsOutput(pin);
         otyper::AsPushPull(pin);
-        //Ospeedr::SetValue(speed << (pin * 2));
+        ospeedr::AsMedium(pin);
     }
     __forceinline static void Set(void)
     {
@@ -79,8 +104,7 @@ public:
     }
     __forceinline static void Toggle(void)
     {
-        volatile bool a = IsRised();
-        if (a)
+        if (IsRised())
         {
             Reset();
         }
