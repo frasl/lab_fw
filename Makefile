@@ -41,6 +41,7 @@ Core/Src/main.cpp \
 Core/Src/blinker.cpp \
 Core/Src/command_handler.cpp \
 Core/Src/mem.cpp \
+Core/Src/uart.cpp \
 Core/Src/errors.cpp 
 
 C_SOURCES =  \
