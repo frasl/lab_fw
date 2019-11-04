@@ -155,6 +155,8 @@ int main(void)
 
   HAL_UART_Receive_IT(&huart1, buff, 1);
 
+  Mgr.ShowPrompt();
+
   while (1)
   {
     /* USER CODE END WHILE */

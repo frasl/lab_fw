@@ -6,12 +6,12 @@ class UARTCommandManager {
     static const size_t CMD_BUFFER_SIZE = 80;
 
 public:
+    void ShowPrompt();
     void onData(const char *pData, size_t size);
     UARTCommandManager(ICmdProcessor **proc, size_t count);
-
+    
 protected:
-    void onCommand();
-
+    void onCommand();    
 private: 
     char            _cmd_buffer[CMD_BUFFER_SIZE];
     size_t          _cmd_buffer_size = 0; 
