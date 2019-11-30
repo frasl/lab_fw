@@ -37,10 +37,15 @@ public:
         return _data;
     }
 
-    const tuple <Tail ...> &get_rest() const 
+    const tuple<Tail...> &get_rest() const
+    {
+        return _rest;
+    }
+
+    tuple <Tail ...> &get_rest()
     {
         return _rest; 
-    } 
+    }
 
 private:
     Head _data;
