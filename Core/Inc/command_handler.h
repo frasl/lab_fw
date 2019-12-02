@@ -14,6 +14,13 @@ template <typename T> void fetch_param(const char *pstr, size_t len, T &param)
 
 template <> void fetch_param(const char *pstr, size_t len, FWT::str &str);
 template <> void fetch_param(const char *pstr, size_t len, int &num);
+template <typename Tail>
+    void FillParamTuple(const char *params, size_t length, FWT::tuple<Tail> &tup)
+{
+    Tail val;
+    fetch_param(params, length, val);
+    tup.set(val);
+}
 
 template <typename Head, typename ...Tail>
     void FillParamTuple(const char *params, size_t length, FWT::tuple<Head, Tail...> &tup)
@@ -27,18 +34,11 @@ template <typename Head, typename ...Tail>
             Head val;
             fetch_param(param_start, ptr - param_start, val);
             tup.set(val);
-            FillParamTuple<Tail...>(ptr + 1, length - (ptr - params), tup.get_rest());
+            ptr++;
+            FillParamTuple<Tail...>(ptr, length - (ptr - params), tup.get_rest());
             return;
         }
     }
-}
-
-template <typename Tail>
-    void FillParamTuple(const char *params, size_t length, FWT::tuple<Tail> &tup)
-{
-    Tail val;
-    fetch_param(params, length, val);
-    tup.set(val);
 }
 
 template <>
@@ -63,7 +63,7 @@ public:
 
         FWT::tuple<Args...> params; 
         FillParamTuple<Args...>(param_start, length - (param_start - command), params);
-        
+
         _handler(params);
 
         return true; 
